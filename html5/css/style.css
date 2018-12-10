@@ -1,0 +1,492 @@
+body{
+	margin:0;
+	padding:0;
+}
+header{
+	margin:0;
+	padding:0;
+}
+/*Menu horizontal fixo*/
+#menu li { 
+	list-style:none; 
+	display: inline;
+	margin-left:5%;
+	color:white;
+	font-size:1.2em;
+	font-family:arial;
+}
+#menu ul li:hover{
+	background-color:#CD1076;
+	border-radius: 30px 30px 30px 30px;
+	padding:1% 0 1% 0;
+}
+#menu{
+	background-color:#778899;
+	padding:1% 0 1% 0;
+	width:45%;
+	border-radius: 30px 30px 30px 30px;
+	position: fixed;
+}	
+a{
+	text-decoration: none;
+}
+
+/*Efeito do menu*/
+.td1:hover{
+	padding: 2% 2% 2% 2%;
+	background-color: #000000;
+	border-radius: 90px 90px  90px  90px ;
+}
+.td2:hover{
+	padding: 2% 2% 2% 2%;
+	background-color:	#000000;
+	border-radius: 90px 90px  90px  90px ;}
+.td3:hover{
+	padding: 2% 2% 2% 2%;
+	background-color:	#000000;
+	border-radius: 90px 90px  90px  90px ;
+}
+.td4:hover{
+	padding: 2% 2% 2% 2%;
+	background-color:	#000000;
+	border-radius: 90px 90px  90px  90px ;
+}
+.td5:hover{
+	padding: 2% 2% 2% 2%;
+	background-color:	#000000;
+	border-radius: 90px 90px  90px  90px ;
+}
+.td6:hover{
+	padding: 2% 2% 2% 2%;
+	background-color:#000000;
+	border-radius: 90px 90px  90px  90px ;
+}
+/*Menu Hamburguer Fixo*/
+@media (max-width: 500px) {
+a 
+{
+  text-decoration: none;
+  color: black; 
+  transition: color 0.3s ease;
+}
+
+#menuToggle
+{
+  display: block;
+ position: fixed;
+  top: 50px;
+  z-index: 1; 
+  -webkit-user-select: none;
+  user-select:none;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* ocultar isso */
+  z-index: 2; /* coloque sobre o hambúrguer */
+  -webkit-touch-callout: none;
+}
+/*
+ * Apenas um hamburguer rápido
+ */
+#menuToggle span
+{
+  display: block;
+  width: 50px;
+  height: 9px;
+  margin-bottom: 5px;
+  position: relative;
+  background:#778899;/*Cor do hambuguer*/ 
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+/* 
+ Transforma as marcas do menu em um X
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+/*
+  Mas vamos esconder o do meio.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+/*
+ *  posicionado absoluto 
+ * no canto superior esquerdo da tela
+ */
+#menu{
+  position: absolute;
+  width:10%;
+  margin: -100px 0 0 -75px;
+  padding: 150%;
+  padding-top: 125px;
+  background: 0;/*Cor do menu*/
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /*  para parar a cintilação do texto no safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menu li
+{
+  padding: 10px 0 10px 0;
+  font-size: 1.2em;
+  color:#6B4538;
+}
+
+/*
+ * E vamos deslizar da esquerda
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+/*A partir da Tela X o menu muda.*/
+
+.td1:hover{
+	padding: 1% 1% 0% 1%;
+	background-color: white;
+	border-radius: 90px 90px  90px  90px ;
+}
+.td2:hover{
+padding: 1% 1% 0% 1%;
+	background-color: white;
+	border-radius: 90px 90px  90px  90px ;
+}
+.td3:hover{
+padding: 1% 1% 0% 1%;
+	background-color: white;
+	border-radius: 90px 90px  90px  90px ;
+}
+.td4:hover{
+	padding: 1% 1% 0% 1%;
+	background-color: white;
+	border-radius: 90px 90px  90px  90px ;
+}
+.td5:hover{
+	padding: 1% 1% 0% 1%;
+	background-color: white;
+	border-radius: 90px 90px  90px  90px ;
+}
+.td6:hover{
+	padding: 1% 1% 0% 1%;
+	background-color: white;
+	border-radius: 90px 90px  90px  90px ;
+}
+}
+/*Footer*/
+footer{
+	height:50px;
+	color:white;
+	background:#778899;
+	padding-bottom:100px;
+	
+}
+footer p{
+	text-align:center;
+	font-size:1.2em;
+	color:white;
+	padding-top:1%;
+}
+
+footer ul li{
+	display:inline;
+}
+footer ul {
+	display: flex;
+   justify-content: center;
+
+}
+/*Caixa de apresentação na home do portfolio*/
+#home{
+	/*background-image:url(../imagens/3242864_L.jpg);
+	background-repeat: no-repeat;
+	background-position:center;                      Layout inicial, pode voltar a utilizar esses atributos em futuras alterações
+	background-size:100%;*/
+	margin-top:10%;
+	border: 0px solid;
+	padding:2% 1% 25% 5%;	
+}
+#home h1{
+	text-align:center;
+	font-size: 3.2em;
+	color:	#C71585;
+	font-family:monotype corsiva;
+	margin-top:15%;
+	border: 0px solid;
+	margin-bottom:2%;
+	padding-bottom:20%;
+}
+/*Parte da Fatec Jales, texto e imagem,
+E parte dos cursos da Fatec Jales*/
+#fatecjalestext h2{
+	text-align:left;
+	margin-top:0%;
+	margin-bottom:5%;
+	font-size:1.5em;
+	color:white;
+	background-color:#DB7093;
+	padding:1% 0 1% 0;
+}
+#fatecjalestext img{
+	width:45%;	
+	float:left;
+	margin-left:5%;
+	margin-top:3%;
+}
+#fatecjalestext p{	
+	text-align:justify;
+	font-family:arial;
+	color:black;
+	margin-top:0%;
+	margin-bottom:3%;
+	width:40%;
+	margin-left:55%;
+}
+.logofatec{
+	width:7%;
+	margin-left:70%;
+	margin-bottom:0%;
+	margin-top:0
+}
+@media (max-width: 500px) {
+#fatecjalestext img{
+	width:90%;	
+	float:center;
+	margin-left:5%;
+	margin-top:3%;
+	margin-bottom:2%;
+}
+#fatecjalestext p{	
+	text-align:justify;
+	font-family:arial;
+	color:black;
+	margin-top:0%;
+	margin-bottom:3%;
+	width:100%;
+	margin-left:0%;
+}
+.logofatec{
+	width:20%;
+	margin-left:40%;
+	margin-bottom:0%;
+	margin-top:0
+}
+}
+/*ADS*/
+.itemum:hover .descricaoads{
+    display: block;
+}
+.descricaoads{
+    display: none;
+}
+.descricaoads  h1{
+    text-align:center;
+	font-size:1.5em;
+}
+.descricaoads h2 {
+    text-align:center;
+	font-size:1.9em;
+}
+.descricaoads p{
+    width:60%;
+	margin-left:20%;
+	text-align:justify;
+	font-size:1em;
+}
+/*AGRONEÓCIO*/
+.itemdois:hover .descricaoagro{
+    display: block;
+}
+.descricaoagro{
+    display: none;
+}
+.descricaoagro  h1{
+    text-align:center;
+	font-size:1.5em;
+}
+.descricaoagro h2 {
+    text-align:center;
+	font-size:1.9em;
+}
+.descricaoagro p{
+    width:60%;
+	margin-left:20%;
+	text-align:justify;
+	font-size:1em;
+}
+/*GESTÃO EMPRESARIAL*/
+.itemtres:hover .descricaogestao{
+    display: block;
+}
+.descricaogestao{
+    display: none;
+}
+.descricaogestao  h1{
+    text-align:center;
+	font-size:1.5em;
+}
+.descricaogestao h2 {
+    text-align:center;
+	font-size:1.9em;
+}
+.descricaogestao p{
+    width:60%;
+	margin-left:20%;
+	text-align:justify;
+	font-size:1em;
+}
+/*SISTEMAS PARA INTERNET*/
+.itemquatro:hover .descricaosi{
+    display: block;
+}
+.descricaosi{
+    display: none;
+}
+.descricaosi  h1{
+    text-align:center;
+	font-size:1.5em;
+}
+.descricaosi h2 {
+    text-align:center;
+	font-size:1.9em;
+}
+.descricaosi p{
+    width:60%;
+	margin-left:20%;
+	text-align:justify;
+	font-size:1em;
+}
+/*Div responsavel pela section da qual está localizado todos os cursos*/
+#cursos{
+	text-align:center; 
+	font-size:1.3em;
+	color:#131442;
+	background-color:#E0EEE0;
+	margin-bottom:2%;
+	margin-top:0;
+	padding:0% 0 2% 0;
+}
+#cursos h3{
+	text-align:left;
+	font-size:1.1em;
+	color:white;
+	background-color:#DB7093;
+	padding:0% 0 1% 0;
+} 
+/*Quadro com os cursos, impressão de transparência feita com degrade de cor aproximado com o do bacground*/
+#cursos img{
+	border:2px solid #F0FFF0;
+	padding:1% 30% 1% 30%;
+	background-color: #F0FFF0;	
+}
+
+/*
+Página do sobre
+TExto
+Filmes, livros, gostos e etc
+Linha do tempo
+Galeria
+*/
+/*Linha do tempo*/
+
+#sobretext h1{
+	text-align:left;
+	font-size:1.1em;
+	color:white;
+	background-color:#DB7093;
+	padding:1% 0 1% 0;
+	margin-top:0;
+}
+
+#sobretext p{
+	margin-top:1%;
+	margin-left:20%;
+	width:60%;	
+	text-align:justify;
+	font-family:arial;
+	font-size:1.2em;
+}
+@media (max-width: 500px) {
+#sobretext p{
+	margin-top:1%;
+	margin-left:2%;
+	width:90%;	
+	text-align:justify;
+	font-family:arial;
+	font-size:1.2em;
+}
+}
+
+/* --------------- GALERIA Grid----------------*/
+    .grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-gap: 20px;
+      align-items: stretch;
+      }
+    .grid img {
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+      max-width: 90%;
+    }
+
+.galeria h1{
+	text-align:left;
+	font-size:1.1em;
+	color:white;
+	background-color:#DB7093;
+	padding:1% 0 1% 0;
+	margin-top:0;
+}
+.galeria h2{
+	background-color:#DCDCDC;
+	padding:1% 0 1% 0;
+	font-size:1.1em;
+	text-align:center;
+}
+
+@media (max-width: 400px) {
+	    .grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-gap: 20px;
+      align-items: stretch;
+      }
+    .grid img {
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+      max-width: 70%;
+    }
+}
+
